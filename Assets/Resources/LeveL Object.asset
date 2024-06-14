@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077bba5d3c174264588ea4182eaeac06, type: 3}
+  m_Name: LeveL Object
+  m_EditorClassIdentifier: 
+  ObjectsData:
+  - ObjID: 1
+    ObjPath: Prefabs/GamePlay/Screw
+  - ObjID: 2
+    ObjPath: Prefabs/GamePlay/ScrewHole
+  - ObjID: 4
+    ObjPath: Prefabs/GamePlay/GamePlayBoard
+  - ObjID: 6
+    ObjPath: Prefabs/GamePlay/SticksShape/L_Shape
+  - ObjID: 7
+    ObjPath: Prefabs/GamePlay/SticksShape/Long_Shape
+  - ObjID: 8
+    ObjPath: Prefabs/GamePlay/SticksShape/NormalShape
+  - ObjID: 9
+    ObjPath: Prefabs/GamePlay/SticksShape/Short_NorShape
+  - ObjID: 10
+    ObjPath: Prefabs/GamePlay/SticksShape/Square_Shape
+  - ObjID: 11
+    ObjPath: Prefabs/GamePlay/SticksShape/Long_NorShape
+  - ObjID: 12
+    ObjPath: Prefabs/GamePlay/SticksShape/T_Shape
+  - ObjID: 13
+    ObjPath: Prefabs/GamePlay/SticksShape/X_Shape
+  - ObjID: 14
+    ObjPath: Prefabs/GamePlay/SticksShape/Hexa_Shape
+  - ObjID: 15
+    ObjPath: Prefabs/GamePlay/SticksShape/C_Shape
+  - ObjID: 16
+    ObjPath: Prefabs/GamePlay/SticksShape/C_Shape (2.0)
+  - ObjID: 17
+    ObjPath: Prefabs/GamePlay/SticksShape/Circle_Shape
+  - ObjID: 18
+    ObjPath: Prefabs/GamePlay/SticksShape/Triangle_Shape
+  - ObjID: 20
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Dragon
+  - ObjID: 21
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Flower
+  - ObjID: 22
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Horse
+  - ObjID: 23
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Dog
+  - ObjID: 24
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Ailu
+  - ObjID: 25
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Cat
+  - ObjID: 26
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Helmet
+  - ObjID: 27
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Panda
+  - ObjID: 28
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/SailShip
+  - ObjID: 29
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Bear
+  - ObjID: 30
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/BasketBall
+  - ObjID: 31
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Owl
+  - ObjID: 32
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Capy
+  - ObjID: 33
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/CaptainShield
+  - ObjID: 34
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/ToyCat
+  - ObjID: 35
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Deer
+  - ObjID: 36
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/ButterFly
+  - ObjID: 37
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Lion
+  - ObjID: 38
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Dolphin
+  - ObjID: 39
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Elephant
+  - ObjID: 40
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/SnowMan
+  - ObjID: 41
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Hippo
+  - ObjID: 42
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Maya
+  - ObjID: 43
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Iguana
+  - ObjID: 44
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Mushroom
+  - ObjID: 46
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Sloth
+  - ObjID: 47
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Chicken
+  - ObjID: 48
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Fish
+  - ObjID: 49
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/SeaLion
+  - ObjID: 50
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Torii
+  - ObjID: 51
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Phone
+  - ObjID: 52
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Toucan
+  - ObjID: 53
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Teapot
+  - ObjID: 54
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Tree
+  - ObjID: 55
+    ObjPath: Prefabs/GamePlay/SticksShape/UniqueShape/Pirate
