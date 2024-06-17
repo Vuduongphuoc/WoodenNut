@@ -32,12 +32,12 @@ public class RewardPanel : MonoBehaviour
     }
     public void RewardPerEveryHardLevel(int value)
     {
-        valueOfReward.text = "" + value;
+        valueOfReward.text = "x" + value;
     }
     public void RewardPopUpFromWheel(Sprite spr,int value)
     {
         playerReward.sprite = spr;
-        valueOfReward.text = "" + value;
+        valueOfReward.text = "x" + value;
     }
     public void RewardPopUpFromDaily(Reward reward, int value)
     {

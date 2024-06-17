@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     private void OpenGame()
     {
         LoadData();
-        UpdatePlayerDataToUI(); 
+        UpdatePlayerDataToUI();
         UIManager.instance.ShowItemsOnUI();
         UIManager.instance.InitLevelsButton();
 
@@ -146,11 +146,11 @@ public class GameManager : MonoBehaviour
     {
         if (levelNeedToReset % 5 == 0)
         {
-            finishLevelReward = 100 / 50 * levelNeedToReset; // Money get after finish level 
+            finishLevelReward = 5 * levelNeedToReset; // Money get after finish level 
         }
         else
         {
-            finishLevelReward = 5 * levelNeedToReset;
+            finishLevelReward =  2 * levelNeedToReset;
         }
 
         if (isAdsBonus)
@@ -213,13 +213,16 @@ public class GameManager : MonoBehaviour
         {
             if (lvl.levelIndex == LeveLManager.Instance.levels.Last().levelIndex)
             {
-                print("This is the last level");
+                UIManager.instance.claimRewardBtn.gameObject.SetActive(false);
+                UIManager.instance.exitBtn.gameObject.SetActive(true);
+                UIManager.instance.NoticeOn();
+                UIManager.instance.DialogDisplay.text = "You have reached" + "\n the last level";
             }
             else
             {
                 playerData.lvlsUnlocked.Add(lvl);
             }
-            
+
         }
     }
     public void UpdatePlayerDataFromUI()
@@ -299,7 +302,7 @@ public class GameManager : MonoBehaviour
     {
         LeveLScriptableObject a = LeveLManager.Instance.levels.First();
         playerData.lvlsUnlocked.Add(a);
-        playerItem.coins = 100;
+        playerItem.coins = 300;
         playerItem.unlockHoleItem = 0;
         playerItem.destroyScrewItem = 0;
         playerItem.reverseItem = 0;
@@ -315,7 +318,7 @@ public class GameManager : MonoBehaviour
         LeveLDataManager.instance.LoadLevel();
         DestroyScrewController.instance.DestroyPhaseIsOn = false;
         ReverseController.Instance.FindSpawnNut();
-        if(a > 150)
+        if (a > 150)
         {
             GameTimer.Instance.conditionTime = 240;
         }
@@ -331,7 +334,10 @@ public class GameManager : MonoBehaviour
     {
         if (levelNeedToReset == LeveLManager.Instance.levels.Last().levelIndex)
         {
+            UIManager.instance.claimRewardBtn.gameObject.SetActive(false);
+            UIManager.instance.exitBtn.gameObject.SetActive(true);
             UIManager.instance.NoticeOn();
+            UIManager.instance.DialogDisplay.text = "You have reached" + "\n the last level";
         }
         else
         {

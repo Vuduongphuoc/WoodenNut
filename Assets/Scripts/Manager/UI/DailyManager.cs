@@ -148,15 +148,20 @@ public class DailyManager : MonoBehaviour
         switch (reward.type)
         {
             case Reward.RewardType.Reverse:
-               
+                UIManager.instance.reverseValue += reward.value;
                 break;
             case Reward.RewardType.RemoveScrew:
+                UIManager.instance.destroyScrewValue += reward.value;
                 break;
             case Reward.RewardType.Coins:
                 UIManager.instance.coin += reward.value;
                 break;
         }
         AudioManager.Instance.PlaySFX(AudioManager.Instance.soundEff[6]);
+        UIManager.instance.NoticeOn();
+        UIManager.instance.NoticeDisplay.text = "Claim";
+        UIManager.instance.exitBtn.gameObject.SetActive(false);
+        UIManager.instance.claimRewardBtn.gameObject.SetActive(true);
         UIManager.instance.UpdatePlayerUI();
         GameManager.Instance.UpdatePlayerDataFromUI();
         lastClaimedTime = DateTime.UtcNow;

@@ -47,6 +47,8 @@ public class UIManager : MonoBehaviour
     public GameObject gamePlayScene;
     public GameObject noticeSign;
     public GameObject NoticeImg;
+    public Button claimRewardBtn;
+    public Button exitBtn;
     public Button pauseBtn;
     public Text LevelDisplay;
     public Text NoticeDisplay;
@@ -201,7 +203,18 @@ public class UIManager : MonoBehaviour
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 1f, 0.5f);
         LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0.7f, 0.3f);
         LeanTween.moveLocalX(noticeSign, 0f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
-        DialogDisplay.text = "You have reached" + "\n the last level";
+        LeanTween.moveLocalY(DialogDisplay.gameObject, -90f, 0.5f);
+
+    }
+    public void NoticeOnWithoutImg()
+    {
+        isPause = true;
+        blackScreen.GetComponent<Image>().raycastTarget = true;
+        LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 1f, 0.5f);
+        LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0.7f, 0.3f);
+        LeanTween.moveLocalX(noticeSign, 0f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
+        NoticeImg.gameObject.SetActive(false);
+        LeanTween.moveLocalY(DialogDisplay.gameObject, 0f, 0.5f);
     }
     public void NoticeOff()
     {
@@ -209,7 +222,8 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ReturnMainMenu();
         blackScreen.GetComponent<Image>().raycastTarget = false;
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 0f, 0.3f);
-        LeanTween.moveLocalX(noticeSign, 1018f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
+        LeanTween.moveLocalX(noticeSign, -1000f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
+        NoticeImg.gameObject.SetActive(true);
         isPause = false;
     }
     public void PopUpOn()
@@ -350,14 +364,15 @@ public class UIManager : MonoBehaviour
         if (coin > 0)
         {
             value += 1;
-            coin -= 50;
+            coin -= 200;
             UpdateCoin();
             UpdateItem(n);
         }
         else
         {
             coin = 0;
-            print("you have 0 coin");
+            NoticeOnWithoutImg();
+            DialogDisplay.text = "You ran out of coins";
         }
     }
     private void AddMoreMoney()
@@ -593,13 +608,9 @@ public class UIManager : MonoBehaviour
     //        }
     //    }
     //}
-    public void RewardPageOn()
-    {
-        LeanTween.moveLocalX(rewardPanel, 0f, 0.3f);
-    }
     public void RewardPageOff()
     {
-        LeanTween.moveLocalX(rewardPanel, -920f, 0.3f);
+        NoticeOff();
     }
     #endregion
 

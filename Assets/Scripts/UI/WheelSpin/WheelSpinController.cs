@@ -182,7 +182,10 @@ public class WheelSpinController : MonoBehaviour
             RewardPanel.instance.RewardPopUpFromWheel(sprs[3], reward);
             UIManager.instance.bonusTimeTicketValue += reward;
         }
-        UIManager.instance.RewardPageOn();
+        UIManager.instance.NoticeDisplay.text = "Reward";
+        UIManager.instance.claimRewardBtn.gameObject.SetActive(true);
+        UIManager.instance.exitBtn.gameObject.SetActive(false);
+        UIManager.instance.NoticeOn();
         UIManager.instance.UpdatePlayerUI();
         GameManager.Instance.UpdatePlayerDataFromUI();
     }
