@@ -221,7 +221,7 @@ public class GameManager : MonoBehaviour
     }
     private void UpdateNewLevelToData(int lvl)
     {
-        if (lvl == levelNeedToReset)
+        if (CheckLevelToUnlock(lvl))
         {
             print("Duplicate");
         }
