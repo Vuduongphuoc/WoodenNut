@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &269541293031682474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269541293031682475}
+  - component: {fileID: 2111176083}
+  - component: {fileID: 2111176084}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &269541293031682475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269541293031682474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111176083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269541293031682474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3627fc25a842b74abaf747b76ee063b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainBackGround: {fileID: 0}
+  pauseObj: {fileID: 0}
+  pauseBtnArea: {fileID: 0}
+  isPause: 0
+  wheelSpinScene: {fileID: 0}
+  wheelInside: {fileID: 0}
+  galleryScene: {fileID: 0}
+  settingScene: {fileID: 0}
+  settingBG: {fileID: 0}
+  dailyScene: {fileID: 0}
+  exitDailyBtn: {fileID: 0}
+  LevelScene: {fileID: 0}
+  levelContainerPos: {fileID: 0}
+  btnPrefab: {fileID: 2957850818573203234, guid: 18b1b60f2f1a1d1458eb2bfac1e4c2de, type: 3}
+  btnSprs:
+  - {fileID: 21300000, guid: 4166d53812d0d864986b45d221533499, type: 3}
+  - {fileID: 21300000, guid: 1c48355c8f905094c8f2e421012e0a8e, type: 3}
+  - {fileID: 21300000, guid: b031750a12c21524e858c52f68960294, type: 3}
+  gamePlayScene: {fileID: 0}
+  noticeSign: {fileID: 0}
+  NoticeImg: {fileID: 0}
+  pauseBtn: {fileID: 0}
+  LevelDisplay: {fileID: 0}
+  NoticeDisplay: {fileID: 0}
+  DialogDisplay: {fileID: 0}
+  mainMenuBtns: {fileID: 0}
+  blackScreen: {fileID: 0}
+  transitionScene: {fileID: 0}
+  overLay: {fileID: 0}
+  popUP: {fileID: 0}
+  addMoreItemByCoinBtn: {fileID: 0}
+  coinPopUp: {fileID: 0}
+  popUpTilte: {fileID: 0}
+  popUpItemImg: {fileID: 0}
+  popUpItemSprs:
+  - {fileID: 21300000, guid: bc3f3a60664f52044bcf3ad53b3dc41c, type: 3}
+  - {fileID: 21300000, guid: 2eb1d31f89190544d8b985227589ce92, type: 3}
+  - {fileID: 21300000, guid: b1e83e16015242f4b80a6c2f733e9216, type: 3}
+  - {fileID: 21300000, guid: 00b7f2d367b921c47b083dee54c082fd, type: 3}
+  - {fileID: 21300000, guid: 43afc55a15804d84084a3e675c98ddf5, type: 3}
+  rewardPanel: {fileID: 0}
+  resultContainer: {fileID: 0}
+  levelFinishPhase: {fileID: 0}
+  missionPhase: {fileID: 0}
+  rewardGivingPhase: {fileID: 0}
+  fillBar: {fileID: 0}
+  levelCompleteTxt: {fileID: 0}
+  rewardValueTxt: {fileID: 0}
+  winScene: {fileID: 0}
+  partical: {fileID: 0}
+  ribbon: {fileID: 0}
+  rewardImg: {fileID: 0}
+  rewardChest:
+  - {fileID: 21300000, guid: 536e1b1fdec4f444d96c9a069ecb8361, type: 3}
+  - {fileID: 21300000, guid: d800e95deb107db4a8e7391fadf66abd, type: 3}
+  loseScene: {fileID: 0}
+  CoinDisplay:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  coin: 1000
+  ItemsInPlayerData:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  addMoreItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  powerBtns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  reverseValue: 0
+  bonusTimeTicketValue: 0
+  unlockHoleValue: 0
+  replayValue: 0
+  destroyScrewValue: 0
+  value: 0
+  n: 
+--- !u!114 &2111176084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269541293031682474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7d56a391c8a08448386271c213158f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
