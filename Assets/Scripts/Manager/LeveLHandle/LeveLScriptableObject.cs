@@ -6,7 +6,6 @@ using System;
 public class LeveLScriptableObject : ScriptableObject
 {
     public int levelIndex;
-    public bool isFinish;
     public List<LevelObjData> ObjPrefabs;
 }
 [Serializable]

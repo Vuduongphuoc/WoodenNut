@@ -66,6 +66,7 @@ public class ReverseController : MonoBehaviour
                 {
                     i.enabled = true;
                 }
+                UIManager.instance.n = "undo";
             }
             else
             {

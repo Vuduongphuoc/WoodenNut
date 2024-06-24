@@ -23,9 +23,7 @@ public class WoodStick : MonoBehaviour
     private GameObject ShapeChildObj;
     private SpawnNut spawnNut;
     public List<GameObject> screwList = new List<GameObject>();
-    bool selfDestruct;
     bool delayAfterMoveScrew;
-    bool AntiForcePrevent;
     int count;
     int directForce;
     float direc;
@@ -42,7 +40,6 @@ public class WoodStick : MonoBehaviour
         objectSprite = GetComponent<SpriteRenderer>();
         objTransform = GetComponent<Transform>();
         UpdateStickColors(color);
-        selfDestruct = false;
     }
     private void Start()
     {
@@ -237,7 +234,6 @@ public class WoodStick : MonoBehaviour
         else
         {
             stopAddForce = false;
-            AntiForcePrevent = false;
         }
     }
     public void ApplyGravity()
@@ -275,11 +271,6 @@ public class WoodStick : MonoBehaviour
             StartCoroutine(PreventGlitchWhenAddGravity());
         }
     }
-    private void SelfDestruct()
-    {
-        selfDestruct = true;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Screw>())
@@ -287,11 +278,6 @@ public class WoodStick : MonoBehaviour
             screwList.Add(collision.gameObject);
             CountScrew();
             CheckThisIsUniqueOrNot();
-            AntiForcePrevent = true;
-        }
-        else if (collision.gameObject.GetComponent<WoodStick>())
-        {
-            AntiForcePrevent = true;
         }
         else if (collision.gameObject.GetComponent<ScrewConnectTrigger>())
         {
@@ -304,7 +290,6 @@ public class WoodStick : MonoBehaviour
         {
             body.bodyType = RigidbodyType2D.Static;
             gameObject.GetComponent<Collider2D>().enabled = false;
-            SelfDestruct();
         }
         else if (collision.gameObject.GetComponent<ScrewConnectTrigger>())
         {

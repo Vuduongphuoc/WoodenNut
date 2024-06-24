@@ -1,0 +1,619 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d373581dda4964095351ed3e9348b7, type: 3}
+  m_Name: Level 55
+  m_EditorClassIdentifier: 
+  levelIndex: 55
+  isFinish: 0
+  ObjPrefabs:
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0, y: 2.67}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: -0.988, y: 0.102534294}
+    ObjRotate: {x: -0, y: -0, z: 0.3214394, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: -0.016999979, y: 0.07653428}
+    ObjRotate: {x: -0, y: -0, z: 0.32143942, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: 0.978, y: 0.087534264}
+    ObjRotate: {x: -0, y: -0, z: 0.3214394, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: -1.006, y: 0.09653429}
+    ObjRotate: {x: -0, y: -0, z: -0.3214395, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: 0.00200002, y: 0.09153424}
+    ObjRotate: {x: -0, y: -0, z: -0.32143945, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: 0.97700006, y: 0.09053424}
+    ObjRotate: {x: -0, y: -0, z: -0.32143947, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 4
+    woodShapeID: 0
+    ObjPos: {x: 0.9520001, y: 0.8545343}
+    ObjRotate: {x: -0, y: -0, z: -0.32143947, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 4
+    woodShapeID: 0
+    ObjPos: {x: -0.025999984, y: 0.8345343}
+    ObjRotate: {x: -0, y: -0, z: -0.32143947, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 4
+    woodShapeID: 0
+    ObjPos: {x: -0.9969999, y: 0.8365343}
+    ObjRotate: {x: -0, y: -0, z: -0.32143947, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: 0.983, y: 0.83753425}
+    ObjRotate: {x: -0, y: -0, z: 0.32143942, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: 0.0009999526, y: 0.8445343}
+    ObjRotate: {x: -0, y: -0, z: 0.32143936, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: -0.989, y: 0.8535343}
+    ObjRotate: {x: -0, y: -0, z: 0.3214394, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: 0.9850001, y: 1.5945343}
+    ObjRotate: {x: -0, y: -0, z: -0.3214395, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: -0.011999983, y: 1.5955343}
+    ObjRotate: {x: -0, y: -0, z: -0.32143953, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: 0.993, y: 1.5925343}
+    ObjRotate: {x: -0, y: -0, z: 0.3214394, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: 0.005, y: 1.5965344}
+    ObjRotate: {x: -0, y: -0, z: 0.3214394, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: -1.0049999, y: 1.5875343}
+    ObjRotate: {x: -0, y: -0, z: -0.3214395, w: 0.94693017}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: -1.005, y: 1.5875343}
+    ObjRotate: {x: -0, y: -0, z: 0.32143933, w: 0.9469302}
+    ObjScale: {x: 0.67, y: 0.65, z: 1}
+  - ObjID: 13
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.0014023753, y: -1.7495738}
+    ObjRotate: {x: -0, y: -0, z: -0.9452363, w: 0.3263868}
+    ObjScale: {x: 0.45, y: 0.45, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: 0.61, y: -1.0234658}
+    ObjRotate: {x: -0, y: -0, z: -0.29237175, w: 0.9563048}
+    ObjScale: {x: 0.92, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 6
+    woodShapeID: 0
+    ObjPos: {x: -0.60999984, y: -1.0234656}
+    ObjRotate: {x: -0, y: -0, z: 0.29237175, w: 0.9563048}
+    ObjScale: {x: 0.92, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 7
+    woodShapeID: 0
+    ObjPos: {x: 0.77, y: -1.0224657}
+    ObjRotate: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
+    ObjScale: {x: 0.75, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 4
+    woodShapeID: 0
+    ObjPos: {x: -0.77, y: -1.0224658}
+    ObjRotate: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
+    ObjScale: {x: 0.75, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 5
+    woodShapeID: 0
+    ObjPos: {x: 1.099, y: -1.0084656}
+    ObjRotate: {x: -0, y: -0, z: -0.42261827, w: 0.9063079}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 5
+    woodShapeID: 0
+    ObjPos: {x: -1.0990001, y: -1.0084656}
+    ObjRotate: {x: -0, y: -0, z: 0.42261827, w: 0.9063079}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: -1.2, y: -1.4534657}
+    ObjRotate: {x: -0, y: -0, z: -0.60876137, w: 0.7933534}
+    ObjScale: {x: 0.85, y: 0.65, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.88, y: -2.621}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.88, y: -2.621}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.88, y: -2.621}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.88, y: -2.621}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 6
+    woodShapeID: 0
+    ObjPos: {x: 1.2000002, y: -1.4534656}
+    ObjRotate: {x: -0, y: -0, z: 0.60876137, w: 0.7933534}
+    ObjScale: {x: 0.85, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 4
+    woodShapeID: 0
+    ObjPos: {x: 1.311, y: -2.2114658}
+    ObjRotate: {x: -0, y: -0, z: 0.38268346, w: 0.92387956}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 1
+    woodShapeID: 0
+    ObjPos: {x: -1.311, y: -2.2114658}
+    ObjRotate: {x: -0, y: -0, z: -0.3826834, w: 0.92387956}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 3
+    woodShapeID: 0
+    ObjPos: {x: 0.449, y: -2.2414658}
+    ObjRotate: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 8
+    screwSprID: 0
+    woodColorID: 5
+    woodShapeID: 0
+    ObjPos: {x: -0.449, y: -2.2414658}
+    ObjRotate: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
+    ObjScale: {x: 0.7, y: 0.65, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.747, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.747, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.747, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.747, y: -1.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1.497, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0.49699998, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.503, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: -0.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 0.5}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 1.25}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 2
+    woodShapeID: 0
+    ObjPos: {x: 0.5, y: 0.85853446}
+    ObjRotate: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+    ObjScale: {x: 0.8, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 2
+    woodShapeID: 0
+    ObjPos: {x: 1.5, y: 0.8585346}
+    ObjRotate: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+    ObjScale: {x: 0.8, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 2
+    woodShapeID: 0
+    ObjPos: {x: -0.49999997, y: 0.85853434}
+    ObjRotate: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+    ObjScale: {x: 0.8, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 2
+    woodShapeID: 0
+    ObjPos: {x: -1.5, y: 0.85853434}
+    ObjRotate: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+    ObjScale: {x: 0.8, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 2
+    woodShapeID: 0
+    ObjPos: {x: 0, y: -1.7614657}
+    ObjRotate: {x: -0, y: -0, z: 1.2574813e-10, w: 1}
+    ObjScale: {x: 1.2, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.00000008940697, y: -0.26146573}
+    ObjRotate: {x: -0, y: -0, z: 3.2595926e-10, w: 1}
+    ObjScale: {x: 1.1, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.00000008917414, y: 0.48853424}
+    ObjRotate: {x: -0, y: -0, z: 0.0000000047617905, w: 1}
+    ObjScale: {x: 1.1, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.00000008917414, y: 1.2385343}
+    ObjRotate: {x: -0, y: -0, z: 0.000000004761854, w: 1}
+    ObjScale: {x: 1.1, y: 0.65, z: 1}
+  - ObjID: 7
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -0.00000008917414, y: 1.9885341}
+    ObjRotate: {x: -0, y: -0, z: 0.0000000047616986, w: 1}
+    ObjScale: {x: 1.1, y: 0.65, z: 1}
+  - ObjID: 4
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0, y: 0}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 1, y: 1, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 1, y: 2.67}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1, y: 2.67}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
+  - ObjID: 1
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: -1.503, y: 2}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}

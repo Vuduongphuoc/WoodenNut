@@ -188,6 +188,7 @@ public class WheelSpinController : MonoBehaviour
         UIManager.instance.NoticeOn();
         UIManager.instance.UpdatePlayerUI();
         GameManager.Instance.UpdatePlayerDataFromUI();
+        GameManager.Instance.SaveData();
     }
 }
 

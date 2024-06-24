@@ -221,7 +221,7 @@ public class GameManager : MonoBehaviour
     }
     private void UpdateNewLevelToData(int lvl)
     {
-        if (CheckLevelToUnlock(lvl))
+        if(CheckLevelToUnlock(lvl))
         {
             print("Duplicate");
         }
@@ -248,7 +248,7 @@ public class GameManager : MonoBehaviour
         playerItem.bonusTimeItem = UIManager.instance.bonusTimeTicketValue;
         //playerData.removeScrew = UIManager.instance.ticket;
     }
-    private void UpdatePlayerDataToUI()
+    public void UpdatePlayerDataToUI()
     {
         UIManager.instance.coin = playerItem.coins;
         UIManager.instance.reverseValue = playerItem.reverseItem;
@@ -265,26 +265,27 @@ public class GameManager : MonoBehaviour
 
     public void QuickPlay()
     {
-        foreach (var lvl in LeveLManager.Instance.levels)
-        {
-            if (CheckLevelIsUnlock(lvl.levelIndex) && lvl.isFinish)
-            {
-                print("This level " + lvl.levelIndex + " is finish");
-            }
-            else if (CheckLevelIsUnlock(lvl.levelIndex) && !lvl.isFinish) // Load level is not finish
-            {
-                print("Current level " + lvl.levelIndex + " is not complete");
-                LoadLevel(lvl.levelIndex);
-                return;
-            }
-            else if (!CheckLevelIsUnlock(lvl.levelIndex)) // Load new level
-            {
-                print("Level " + lvl.levelIndex + " is not in player data. Add level " + lvl.levelIndex + " to player data");
-                LoadLevel(lvl.levelIndex);
-                return;
-            }
+        //foreach (var lvl in LeveLManager.Instance.levels)
+        //{
+        //    if (CheckLevelIsUnlock(lvl.levelIndex) && lvl.isFinish)
+        //    {
+        //        print("This level " + lvl.levelIndex + " is finish");
+        //    }
+        //    else if (CheckLevelIsUnlock(lvl.levelIndex) && !lvl.isFinish) // Load level is not finish
+        //    {
+        //        print("Current level " + lvl.levelIndex + " is not complete");
+        //        LoadLevel(lvl.levelIndex);
+        //        return;
+        //    }
+        //    else if (!CheckLevelIsUnlock(lvl.levelIndex)) // Load new level
+        //    {
+        //        print("Level " + lvl.levelIndex + " is not in player data. Add level " + lvl.levelIndex + " to player data");
+        //        LoadLevel(lvl.levelIndex);
+        //        return;
+        //    }
 
-        }
+        //}
+        LoadLevel(playerData.lvlsUnlocked.Last());
     }
     public void Initial()
     {

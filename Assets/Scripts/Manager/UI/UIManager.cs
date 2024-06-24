@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
     public Text LevelDisplay;
     public Text NoticeDisplay;
     public Text DialogDisplay;
+    [SerializeField] private GameObject overlayNotice;
 
     [Header("---------MainMenu---------")]
     public GameObject mainMenuBtns;
@@ -199,18 +200,18 @@ public class UIManager : MonoBehaviour
     public void NoticeOn()
     {
         isPause = true;
-        blackScreen.GetComponent<Image>().raycastTarget = true;
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 1f, 0.5f);
-        LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0.7f, 0.3f);
+        LeanTween.alpha(overlayNotice.GetComponent<RectTransform>(), 0.5f, 0.3f);
+        overlayNotice.GetComponent<Image>().raycastTarget = true;
         LeanTween.moveLocalX(noticeSign, 0f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
         LeanTween.moveLocalY(DialogDisplay.gameObject, -90f, 0.5f);
     }
     public void NoticeOnWithoutImg()
     {
         isPause = true;
-        blackScreen.GetComponent<Image>().raycastTarget = true;
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 1f, 0.5f);
-        LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0.7f, 0.3f);
+        LeanTween.alpha(overlayNotice.GetComponent<RectTransform>(), 0.5f, 0.3f);
+        overlayNotice.GetComponent<Image>().raycastTarget = true;
         LeanTween.moveLocalX(noticeSign, 0f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
         NoticeImg.gameObject.SetActive(false);
         LeanTween.moveLocalY(DialogDisplay.gameObject, 0f, 0.5f);
@@ -218,8 +219,8 @@ public class UIManager : MonoBehaviour
     }
     public void NoticeOff()
     {
-        LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0f, 0.3f);
-        blackScreen.GetComponent<Image>().raycastTarget = false;
+        LeanTween.alpha(overlayNotice.GetComponent<RectTransform>(), 0f, 0.3f);
+        overlayNotice.GetComponent<Image>().raycastTarget = false;
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 0f, 0.3f);
         LeanTween.moveLocalX(noticeSign, -1080f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
         PopUpOff();
@@ -267,17 +268,18 @@ public class UIManager : MonoBehaviour
             lvlbtn.GetComponent<Button>().onClick.AddListener(delegate { ChoseLevelOff(); });
             lvlbtn.GetComponent<Button>().onClick.AddListener(delegate { StartCoroutine(LoadLevelGamePlay(lvl.levelIndex, lvl)); });
 
-            if (GameManager.Instance.CheckLevelToUnlock(lvl.levelIndex))
-            {
-                lvlbtn.GetComponent<LevelDetail>().lockedImg.SetActive(false);
-                lvlbtn.GetComponent<Button>().interactable = true;
-            }
-            else
-            {
-                lvlbtn.GetComponent<LevelDetail>().lockedImg.SetActive(true);
-                lvlbtn.GetComponent<Button>().interactable = false;
-            }
-            btnsContainer.Add(lvlbtn);
+            //if (GameManager.Instance.CheckLevelToUnlock(lvl.levelIndex))
+            //{
+            //    lvlbtn.GetComponent<LevelDetail>().lockedImg.SetActive(false);
+            //    lvlbtn.GetComponent<Button>().interactable = true;
+            //}
+            //else
+            //{
+            //    lvlbtn.GetComponent<Image>().sprite = btnSprs[2];
+            //    lvlbtn.GetComponent<LevelDetail>().lockedImg.SetActive(true);
+            //    lvlbtn.GetComponent<Button>().interactable = false;
+            //}
+            //btnsContainer.Add(lvlbtn);
         }
     }
 
@@ -429,6 +431,53 @@ public class UIManager : MonoBehaviour
         value = v;
         UpdateItem(n);
         ShowItemsOnUI();
+        n = "";
+        GameManager.Instance.UpdatePlayerDataFromUI();
+        GameManager.Instance.SaveData();
+    }
+    private void ReverserItem()
+    {
+        if (reverseValue <= 0)      //REVERSE
+        {
+            powerBtns[0].onClick.RemoveAllListeners();
+            reverseValue = 0;
+            addMoreItems[0].enabled = true;
+            powerBtns[0].onClick.AddListener(delegate { ChangeValuePopUp("undo"); });
+            ItemsInPlayerData[0].enabled = false;
+        }
+        else
+        {
+            powerBtns[0].onClick.RemoveAllListeners();
+            addMoreItems[0].enabled = false;
+            powerBtns[0].onClick.AddListener(ReverseController.Instance.ActiveReverse);
+            powerBtns[0].onClick.AddListener(delegate { MinusItem(reverseValue); });
+            ItemsInPlayerData[0].enabled = true;
+        }
+    }
+    private void DestroyScrewItem()
+    {
+        if (destroyScrewValue <= 0)     //DESTROY SCREW
+        {
+            destroyScrewValue = 0;
+            addMoreItems[1].enabled = true;
+            powerBtns[1].onClick.RemoveAllListeners();
+            powerBtns[1].onClick.AddListener(delegate { ChangeValuePopUp("unscrew"); });
+            ItemsInPlayerData[1].enabled = false;
+        }
+        else
+        {
+            addMoreItems[1].enabled = false;
+            powerBtns[1].onClick.RemoveAllListeners();
+            powerBtns[1].onClick.AddListener(DestroyScrewController.instance.DestroyPhaseActive);
+            powerBtns[1].onClick.AddListener(delegate { MinusItem(destroyScrewValue); });
+            ItemsInPlayerData[1].enabled = true;
+        }
+    }
+    public void ShowItemsOnUI()
+    {
+        UpdateCoin();
+        DestroyScrewItem();
+        ReverserItem();
     }
     #endregion
 
@@ -543,52 +592,6 @@ public class UIManager : MonoBehaviour
         LeanTween.alpha(transitionScene.GetComponent<RectTransform>(), 0f, 0.3f);
         GameManager.Instance.UpdateGameState(GameState.MainMenuState);
         isPause = true;
-    }
-    private void ReverserItem()
-    {
-        if (reverseValue <= 0)      //REVERSE
-        {
-            powerBtns[0].onClick.RemoveAllListeners();
-            reverseValue = 0;
-            addMoreItems[0].enabled = true;
-            powerBtns[0].onClick.AddListener(delegate { ChangeValuePopUp("undo"); });
-            ItemsInPlayerData[0].enabled = false;
-        }
-        else
-        {
-            powerBtns[0].onClick.RemoveAllListeners();
-            n = "undo";
-            addMoreItems[0].enabled = false;
-            powerBtns[0].onClick.AddListener(ReverseController.Instance.ActiveReverse);
-            powerBtns[0].onClick.AddListener(delegate { MinusItem(reverseValue); });
-            ItemsInPlayerData[0].enabled = true;
-        }
-    }
-    private void DestroyScrewItem()
-    {
-        if (destroyScrewValue <= 0)     //DESTROY SCREW
-        {
-            destroyScrewValue = 0;
-            addMoreItems[1].enabled = true;
-            powerBtns[1].onClick.RemoveAllListeners();
-            powerBtns[1].onClick.AddListener(delegate { ChangeValuePopUp("unscrew"); });
-            ItemsInPlayerData[1].enabled = false;
-        }
-        else
-        {
-            n = "unscrew";
-            addMoreItems[1].enabled = false;
-            powerBtns[1].onClick.RemoveAllListeners();
-            powerBtns[1].onClick.AddListener(DestroyScrewController.instance.DestroyPhaseActive);
-            powerBtns[1].onClick.AddListener(delegate { MinusItem(destroyScrewValue); });
-            ItemsInPlayerData[1].enabled = true;
-        }
-    }
-    public void ShowItemsOnUI()
-    {
-        UpdateCoin();
-        DestroyScrewItem();
-        ReverserItem();
     }
 
     #endregion

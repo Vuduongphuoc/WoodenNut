@@ -31,5 +31,6 @@ public class DestroyScrewController : MonoBehaviour
     public void DestroyPhaseActive()
     {
         DestroyPhaseIsOn = true;
+        UIManager.instance.n = "unscrew";
     }
 }

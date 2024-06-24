@@ -17,14 +17,11 @@ public class SpawnNut : MonoBehaviour
     public bool isSpawnState;
     public bool pullPhys;
     public Rigidbody2D body;
-    int count;
     [SerializeField] private GameObject woodNut;
 
     private void Start()
     {
-        count = 0;
         wodstik = GetComponent<WoodStick>();
-
     }
     private void OnEnable()
     {
