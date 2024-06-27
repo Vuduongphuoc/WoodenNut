@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1525354080125229804}
   - component: {fileID: 322582794785808451}
   - component: {fileID: 8183306646688845613}
-  - component: {fileID: 1697791873878290556}
   - component: {fileID: 4573919918526980363}
+  - component: {fileID: 1697791873878290556}
   - component: {fileID: 5738055511184489997}
   m_Layer: 23
   m_Name: Tail
@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2220522876647979393}
+  - {fileID: 5998040051299899195}
   m_Father: {fileID: 8449831962016311404}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,25 +140,6 @@ PolygonCollider2D:
       - {x: 0.66999996, y: -0.59499997}
       - {x: 0.66999996, y: -0.295}
       - {x: 0.63, y: -0.225}
---- !u!114 &1697791873878290556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434746647868349567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screwL: []
-  PosReverse: []
-  RotReverse: []
-  noConnectState: 0
-  isSpawnState: 0
-  pullPhys: 0
-  woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
 --- !u!50 &4573919918526980363
 Rigidbody2D:
   serializedVersion: 4
@@ -171,14 +153,33 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1697791873878290556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434746647868349567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &5738055511184489997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -355,13 +358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &3222493102217900897
 Rigidbody2D:
   serializedVersion: 4
@@ -375,9 +378,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -395,6 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -556,13 +561,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &2628446959560291012
 Rigidbody2D:
   serializedVersion: 4
@@ -576,9 +581,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -596,6 +601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -801,13 +808,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &4463904406190542861
 Rigidbody2D:
   serializedVersion: 4
@@ -821,9 +828,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -841,6 +848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1063,13 +1072,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &2376027480308665075
 Rigidbody2D:
   serializedVersion: 4
@@ -1083,9 +1092,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1103,6 +1112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1278,13 +1289,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &1922680065066444878
 Rigidbody2D:
   serializedVersion: 4
@@ -1298,9 +1309,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1318,6 +1329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1396,6 +1409,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
   m_PrefabInstance: {fileID: 1324760686801902789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2093897182971653113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1525354080125229804}
+    m_Modifications:
+    - target: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_Name
+      value: WoodStickNut (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170815729668762534, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_SortingOrder
+      value: -49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.379
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+--- !u!4 &5998040051299899195 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5634660371571457218, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  m_PrefabInstance: {fileID: 2093897182971653113}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2363209073232121047
 PrefabInstance:

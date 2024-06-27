@@ -102,9 +102,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -182,9 +182,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &5972336342195389914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +203,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &3277170370339219651
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,9 +310,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -402,9 +400,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &2966142733999584193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +421,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &3541415043614539686
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,9 +525,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -627,9 +623,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &6862030316596877425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +644,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &3930973550933632034
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,9 +802,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -904,9 +898,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &1948562957049383821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +919,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &5693183343950174615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,9 +1023,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1121,9 +1113,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &6936689571464969332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,7 +1134,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &6211212300831830579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,9 +1239,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1339,9 +1329,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &7870805253347381453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,7 +1350,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &6761232426783942899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,9 +1452,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1571,9 +1559,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &6455281747416044599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,7 +1580,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &8768823056688749669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,9 +1682,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1803,9 +1789,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &5299741389699815834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,7 +1810,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &8902071907715768549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,9 +1913,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2006,9 +1990,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &7292282328479837766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2011,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1 &9035949395219943572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,9 +2113,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2238,9 +2220,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &8500522696575592334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,7 +2241,6 @@ MonoBehaviour:
   uniqueShape: []
   shapeID: 0
   screwList: []
-  stopAddForce: 0
 --- !u!1001 &557188561925320688
 PrefabInstance:
   m_ObjectHideFlags: 0

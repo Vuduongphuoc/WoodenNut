@@ -7,7 +7,7 @@ public class AreaEffectStick : MonoBehaviour
     private AreaEffector2D areaEffect;
     private WoodStick gameObj;
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         gameObj = GetComponentInParent<WoodStick>();
         areaEffect = GetComponent<AreaEffector2D>();

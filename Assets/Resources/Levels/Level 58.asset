@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Level 58
   m_EditorClassIdentifier: 
   levelIndex: 58
-  isFinish: 0
   ObjPrefabs:
+  - ObjID: 2
+    screwSprID: 0
+    woodColorID: 0
+    woodShapeID: 0
+    ObjPos: {x: 0, y: -0.75}
+    ObjRotate: {x: -0, y: -0, z: -0, w: 1}
+    ObjScale: {x: 0.5, y: 0.5, z: 1}
   - ObjID: 2
     screwSprID: 0
     woodColorID: 0
@@ -47,16 +53,16 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 0
     woodShapeID: 0
-    ObjPos: {x: 0.0015877797, y: 0.2008461}
-    ObjRotate: {x: -0, y: -0, z: 0.41412655, w: 0.9102193}
-    ObjScale: {x: 0.39999998, y: 0.39999998, z: 1}
+    ObjPos: {x: 0.0015879278, y: 0.1855333}
+    ObjRotate: {x: -0, y: -0, z: 0.41412765, w: 0.9102189}
+    ObjScale: {x: 0.40000004, y: 0.40000004, z: 1}
   - ObjID: 17
     screwSprID: 0
     woodColorID: 0
     woodShapeID: 0
-    ObjPos: {x: -0.000024195164, y: 0.9508107}
-    ObjRotate: {x: -0, y: -0, z: -0.0014920007, w: 0.9999989}
-    ObjScale: {x: 0.20000006, y: 0.20000006, z: 1}
+    ObjPos: {x: -0.00002449908, y: 0.9354979}
+    ObjRotate: {x: -0, y: -0, z: -0.0014944078, w: 0.9999989}
+    ObjScale: {x: 0.20000009, y: 0.20000009, z: 1}
   - ObjID: 2
     screwSprID: 0
     woodColorID: 0
@@ -103,9 +109,9 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 1
     woodShapeID: 0
-    ObjPos: {x: 1.47, y: -1.0591892}
+    ObjPos: {x: 1.47, y: -1.0745019}
     ObjRotate: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-    ObjScale: {x: 0.40000007, y: 0.40000007, z: 1}
+    ObjScale: {x: 0.40000013, y: 0.40000013, z: 1}
   - ObjID: 1
     screwSprID: 0
     woodColorID: 0
@@ -138,21 +144,21 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 1
     woodShapeID: 0
-    ObjPos: {x: -1.59, y: -1.0591892}
+    ObjPos: {x: -1.59, y: -1.0745019}
     ObjRotate: {x: -0, y: -0, z: -0.000000044333483, w: 1}
     ObjScale: {x: 0.4, y: 0.4, z: 1}
   - ObjID: 8
     screwSprID: 0
     woodColorID: 0
     woodShapeID: 0
-    ObjPos: {x: 0.8, y: -1.0191895}
+    ObjPos: {x: 0.8, y: -1.0345021}
     ObjRotate: {x: -0, y: -0, z: -0.46174863, w: 0.8870109}
     ObjScale: {x: 0.60000014, y: 0.65, z: 1}
   - ObjID: 8
     screwSprID: 0
     woodColorID: 0
     woodShapeID: 0
-    ObjPos: {x: -0.88, y: -1.0191892}
+    ObjPos: {x: -0.88, y: -1.0345019}
     ObjRotate: {x: -0, y: -0, z: 0.4226183, w: 0.9063078}
     ObjScale: {x: 0.65, y: 0.65, z: 1}
   - ObjID: 1
@@ -229,30 +235,30 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 1
     woodShapeID: 0
-    ObjPos: {x: 1.03, y: 0.27}
+    ObjPos: {x: 0.96, y: 0.14615294}
     ObjRotate: {x: -0, y: -0, z: 0.47331968, w: 0.8808908}
-    ObjScale: {x: 0.65, y: 0.65000004, z: 1}
+    ObjScale: {x: 0.55, y: 0.65000004, z: 1}
   - ObjID: 11
     screwSprID: 0
     woodColorID: 2
     woodShapeID: 0
-    ObjPos: {x: 0, y: 0.20081063}
+    ObjPos: {x: 0, y: 0.18549782}
     ObjRotate: {x: -0, y: -0, z: -1.9771605e-10, w: 1}
     ObjScale: {x: 0.87, y: 0.65, z: 1}
   - ObjID: 8
     screwSprID: 0
     woodColorID: 3
     woodShapeID: 0
-    ObjPos: {x: 1.2, y: 1.3708106}
+    ObjPos: {x: 1.2, y: 1.355498}
     ObjRotate: {x: -0, y: -0, z: -0.4617486, w: 0.8870109}
     ObjScale: {x: 0.6000001, y: 0.65, z: 1}
   - ObjID: 11
     screwSprID: 0
     woodColorID: 1
     woodShapeID: 0
-    ObjPos: {x: -0.98, y: 0.17}
+    ObjPos: {x: -0.98, y: 0.1546872}
     ObjRotate: {x: -0, y: -0, z: -0.4794579, w: 0.8775649}
-    ObjScale: {x: 0.64, y: 0.6499999, z: 1}
+    ObjScale: {x: 0.5500001, y: 0.65000004, z: 1}
   - ObjID: 1
     screwSprID: 0
     woodColorID: 0
@@ -271,21 +277,21 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 2
     woodShapeID: 0
-    ObjPos: {x: -0.02000003, y: -0.5791893}
+    ObjPos: {x: -0.02000003, y: -0.5945021}
     ObjRotate: {x: -0, y: -0, z: -0.000000002247769, w: 1}
     ObjScale: {x: 0.73, y: 0.65, z: 1}
   - ObjID: 8
     screwSprID: 0
     woodColorID: 3
     woodShapeID: 0
-    ObjPos: {x: -1.2, y: 1.3708107}
+    ObjPos: {x: -1.2, y: 1.3554981}
     ObjRotate: {x: -0, y: -0, z: 0.46174866, w: 0.8870109}
     ObjScale: {x: 0.6, y: 0.65, z: 1}
   - ObjID: 7
     screwSprID: 0
     woodColorID: 2
     woodShapeID: 0
-    ObjPos: {x: 0, y: 0.9308107}
+    ObjPos: {x: 0, y: 0.9154979}
     ObjRotate: {x: -0, y: -0, z: -3.0668784e-10, w: 1}
     ObjScale: {x: 1, y: 0.65, z: 1}
   - ObjID: 2

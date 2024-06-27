@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Level 210
   m_EditorClassIdentifier: 
   levelIndex: 210
-  isFinish: 0
   ObjPrefabs:
   - ObjID: 2
     screwSprID: 0
@@ -201,7 +200,7 @@ MonoBehaviour:
     screwSprID: 0
     woodColorID: 0
     woodShapeID: 0
-    ObjPos: {x: -0.62, y: -2.22}
+    ObjPos: {x: -0.612, y: -2.206}
     ObjRotate: {x: -0, y: -0, z: -0, w: 1}
     ObjScale: {x: 0.6, y: 0.6, z: 1}
   - ObjID: 2

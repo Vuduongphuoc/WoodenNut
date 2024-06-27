@@ -19,39 +19,37 @@ public class DragDrop : MonoBehaviour
     {
         cam = Camera.main;
         parentObj = GetComponentInParent<Screw>();
+        EventManager.singleton.DragDropEvent += DetectObjectToDrag;
     }
-    private void Update()
+    private void DetectObjectToDrag()
     {
         ObjPos = cam.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0) && !UIManager.instance.isPause)
+        if (!drag)
         {
-            if (!drag)
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, moveable);
+            if (hit.collider != null && hit.collider.gameObject == this.gameObject)
             {
-                
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, moveable);
-                if (hit.collider != null && hit.collider.gameObject == this.gameObject)
+                DragDropController.instance.screwHit = this.gameObject.GetComponent<DragDrop>();
+                startPos = parentObj.gameObject.transform.position;
+                parentObj.ChangeSpr();
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.soundEff[Random.Range(1, 3)]);
+                drag = true;
+                //this.gameObject.transform.position = ObjPos;
+                //Do Animation right here screw pull up
+                if (DestroyScrewController.instance.DestroyPhaseIsOn)   // Reset status after Destroy this screw;   
                 {
-                    DragDropController.instance.screwHit = this.gameObject.GetComponent<DragDrop>();
-                    startPos = parentObj.gameObject.transform.position;
-                    AudioManager.Instance.PlaySFX(AudioManager.Instance.soundEff[Random.Range(1, 3)]);
-                    drag = true;
-                    //this.gameObject.transform.position = ObjPos;
-                    //Do Animation right here screw pull up
-                    if (DestroyScrewController.instance.DestroyPhaseIsOn)   // Reset status after Destroy this screw;   
-                    {
-                        DestroyScrewController.instance.ActiveDestroy();
-                        DragDropController.instance.ResetValue();
-                        DestroyScrew();
-                        drag = false;
-                        return;
-                    }
+                    DestroyScrewController.instance.ActiveDestroy();
+                    DragDropController.instance.ResetValue();
+                    DestroyScrew();
+                    drag = false;
+                    return;
                 }
             }
-            else if(drag && !DestroyScrewController.instance.DestroyPhaseIsOn)
-            {
-                ReverseController.Instance.SaveObjectsMove();
-                dragEndCallBack(this);
-            }   
+        }
+        else if (drag && !DestroyScrewController.instance.DestroyPhaseIsOn)
+        {
+            ReverseController.Instance.SaveObjectsMove();
+            dragEndCallBack(this);
         }
     }
     private void DestroyScrew()
@@ -74,6 +72,7 @@ public class DragDrop : MonoBehaviour
 
     private void OnDestroy()
     {
+        EventManager.singleton.DragDropEvent -= DetectObjectToDrag;
         screwPos.Clear();
         ReverseController.Instance.screws.Remove(this);
     }

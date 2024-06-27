@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Profiling;
 
 public class SpawnNut : MonoBehaviour
 {
@@ -13,25 +10,45 @@ public class SpawnNut : MonoBehaviour
     public List<Quaternion> RotReverse = new List<Quaternion>();
     public bool noConnectState;
     public List<GameObject> woodNuts = new List<GameObject>();
-    private GameObject s;
     public bool isSpawnState;
-    public bool pullPhys;
-    public Rigidbody2D body;
     [SerializeField] private GameObject woodNut;
+    [SerializeField] private bool useBurst;
+    float timePull = 0.05f;
+    float nextTimePull, nextTimeToChange, pullSpd, rotationAngle;
+    Rigidbody2D gravity;
+    Quaternion rotationZ;
 
     private void Start()
     {
         wodstik = GetComponent<WoodStick>();
+        gravity = GetComponent<Rigidbody2D>();
+        rotationZ = gameObject.transform.rotation;
+        pullSpd = 0.005f;
     }
     private void OnEnable()
     {
-        isSpawnState = true;
+        if (this.gameObject.tag == "Unique")
+        {
+            isSpawnState = false;
+        }
+        else
+        {
+            isSpawnState = true;
+        }
     }
     private void Update()
     {
         if (!CheckAllNutIsConnect() && !this.gameObject.CompareTag("Unique"))
         {
             noConnectState = true;
+            if (ShouldPullPhysic() && !UIManager.instance.isPause)
+            {
+                Pull();
+            }
+            if (ShouldChangeDirection())
+            {
+                ChangeDirection();
+            }
             //PhysicController.instance.CallToPull(this.gameObject);
         }
         else
@@ -40,7 +57,7 @@ public class SpawnNut : MonoBehaviour
             return;
         }
 
-        if (woodNuts.Count < wodstik.screwList.Count)
+        if (woodNuts.Count < wodstik.screwList.Count && isSpawnState)
         {
             foreach (GameObject a in wodstik.screwList)
             {
@@ -52,10 +69,35 @@ public class SpawnNut : MonoBehaviour
             isSpawnState = false;
         }
     }
-
+    private void Pull()
+    {
+        nextTimePull = Time.time + timePull;
+        if (rotationZ.z >= -181f && rotationZ.z <= -91f || rotationZ.z >= -1f && rotationZ.z <= 91f)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x - pullSpd, gameObject.transform.position.y);
+        }
+        else if (rotationZ.z > -91f && rotationZ.z < -1f  || rotationZ.z > 91f && rotationZ.z < 181f)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x + pullSpd, gameObject.transform.position.y);
+        }
+    }
+    private void ChangeDirection()
+    {
+        nextTimeToChange = Time.time + 4f;
+        pullSpd += 0.0001f;
+        rotationZ.z = transform.rotation.z;
+    }
+    private bool ShouldChangeDirection()
+    {
+        return Time.time > nextTimeToChange;
+    }
+    private bool ShouldPullPhysic()
+    {
+        return Time.time > nextTimePull;
+    }
     private void Inition(GameObject a)
     {
-        GameObject newNut = Instantiate(woodNut, a.transform.position,Quaternion.identity);
+        GameObject newNut = Instantiate(woodNut, a.transform.position, Quaternion.identity);
         newNut.transform.parent = gameObject.transform;
         newNut.GetComponent<SpriteRenderer>().sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder - 1;
         woodNuts.Add(newNut);
@@ -86,4 +128,25 @@ public class SpawnNut : MonoBehaviour
         ReverseController.Instance.sticks.Remove(this);
     }
 }
+//[BurstCompile]
+//public struct HandlePullPhysic : IJob
+//{
+//    float nextTimePull;
+//    float timePull;
+//    Quaternion rotationZ;
+//    Vector2 a;
+//    public void Execute()
+//    {
+//        timePull = 0.05f;
+//        nextTimePull = Time.time + timePull;
+//        if (rotationZ.z > -180f && rotationZ.z < -90f || rotationZ.z > 0f && rotationZ.z < 90f)
+//        {
+//            a = new Vector2(a.x - 0.005f, a.y);
+//        }
+//        else if (rotationZ.z > -90f && rotationZ.z < 0f || rotationZ.z > 90f && rotationZ.z < 180f)
+//        {
+//            a = new Vector2(a.x + 0.005f, a.y);
+//        }
+//    }
+//}
 

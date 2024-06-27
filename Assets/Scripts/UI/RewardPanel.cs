@@ -34,13 +34,9 @@ public class RewardPanel : MonoBehaviour
     {
         valueOfReward.text = "x" + value;
     }
-    public void RewardPopUpFromWheel(Sprite spr,int value)
+    public void RewardPopUp(Sprite spr,int value)
     {
         playerReward.sprite = spr;
         valueOfReward.text = "x" + value;
-    }
-    public void RewardPopUpFromDaily(Reward reward, int value)
-    {
-        
     }
 }

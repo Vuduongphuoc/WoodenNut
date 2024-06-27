@@ -128,8 +128,8 @@ public class DailyManager : MonoBehaviour
             var nextClaimTime = lastClaimedTime.Value.AddHours(claimCD);
             var currentClaimCD = nextClaimTime - DateTime.UtcNow;
 
-            string cd = $"{currentClaimCD.Hours:D2}:{currentClaimCD.Minutes:D2}:{currentClaimCD.Seconds:D2}";
-            status.text = $"Next daily reward in {cd}";
+            string cd = $"{currentClaimCD.Hours:D2}:{currentClaimCD.Minutes:D2}";
+            status.text = $"Next reward in {cd}";
         }
         for (int i = 0; i < rewardPrefabs.Count; i++)
         {
@@ -143,31 +143,34 @@ public class DailyManager : MonoBehaviour
         {
             return;
         }
-
-        var reward = rewards[currentStreak];
-        switch (reward.type)
+        else
         {
-            case Reward.RewardType.Reverse:
-                UIManager.instance.reverseValue += reward.value;
-                break;
-            case Reward.RewardType.RemoveScrew:
-                UIManager.instance.destroyScrewValue += reward.value;
-                break;
-            case Reward.RewardType.Coins:
-                UIManager.instance.coin += reward.value;
-                break;
+            var reward = rewards[currentStreak];
+            switch (reward.type)
+            {
+                case Reward.RewardType.Reverse:
+                    UIManager.instance.reverseValue += reward.value;
+                    break;
+                case Reward.RewardType.RemoveScrew:
+                    UIManager.instance.destroyScrewValue += reward.value;
+                    break;
+                case Reward.RewardType.Coins:
+                    UIManager.instance.coin += reward.value;
+                    UIManager.instance.DialogDisplay.text = reward.value.ToString();
+                    break;
+            }
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.soundEff[6]);
+            UIManager.instance.NoticeOn();
+            UIManager.instance.NoticeDisplay.text = "Your reward";
+            UIManager.instance.exitBtn.gameObject.SetActive(false);
+            UIManager.instance.claimRewardBtn.gameObject.SetActive(true);
+            UIManager.instance.UpdatePlayerUI();
+            GameManager.Instance.UpdatePlayerDataFromUI();
+            lastClaimedTime = DateTime.UtcNow;
+            currentStreak = (currentStreak + 1) % maxStreakCounter;
+
+            UpdateRewardsState();
         }
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.soundEff[6]);
-        UIManager.instance.NoticeOn();
-        UIManager.instance.NoticeDisplay.text = "Claim";
-        UIManager.instance.exitBtn.gameObject.SetActive(false);
-        UIManager.instance.claimRewardBtn.gameObject.SetActive(true);
-        UIManager.instance.UpdatePlayerUI();
-        GameManager.Instance.UpdatePlayerDataFromUI();
-        lastClaimedTime = DateTime.UtcNow;
-        currentStreak = (currentStreak + 1) % maxStreakCounter;
-        
-        UpdateRewardsState();
     }
     public void ClaimAdsReward()
     {

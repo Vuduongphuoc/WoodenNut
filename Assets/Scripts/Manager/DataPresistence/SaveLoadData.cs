@@ -8,7 +8,7 @@ public class SaveLoadData :MonoBehaviour
     public PlayerData playerData;
     public Items playerItems;
 
-    private void Start()
+    private void Awake()
     {
         if(instance == null)
         {

@@ -102,9 +102,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -164,9 +164,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &2013596574028725194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -286,9 +287,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -344,9 +345,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &6571876383367503936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -466,9 +468,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -540,9 +542,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &3880059404201644803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -662,9 +665,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -695,14 +698,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.13499999, y: 0.995}
-      - {x: -0.295, y: -0.465}
-      - {x: -0.295, y: -0.875}
-      - {x: -0.16499999, y: -0.995}
-      - {x: 0.155, y: -0.995}
-      - {x: 0.295, y: -0.905}
-      - {x: 0.295, y: -0.375}
-      - {x: 0.125, y: 0.995}
+    - - {x: -0.09673929, y: 0.995}
+      - {x: -0.11007324, y: -0.4076089}
+      - {x: -0.23002714, y: -0.5102018}
+      - {x: -0.29373705, y: -0.6499647}
+      - {x: -0.26090565, y: -0.8219644}
+      - {x: -0.13469395, y: -0.94575274}
+      - {x: -0.019794762, y: -0.9893786}
+      - {x: 0.1246939, y: -0.9533292}
+      - {x: 0.2533292, y: -0.86711735}
+      - {x: 0.30745453, y: -0.68484294}
+      - {x: 0.24187225, y: -0.49300212}
+      - {x: 0.09731975, y: -0.4260143}
+      - {x: 0.09949285, y: 0.995}
 --- !u!114 &6976817886570025307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,9 +728,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &5626837589887039838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -842,9 +851,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -916,9 +925,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &2966142733999584193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1040,9 +1050,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1096,9 +1106,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &6862030316596877425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,6 +1120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1273,9 +1284,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1332,9 +1343,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &5211629782769643363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,6 +1357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1455,9 +1467,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1522,9 +1534,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &1948562957049383821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,6 +1548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1644,9 +1657,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1677,14 +1690,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.13499999, y: 0.995}
-      - {x: -0.295, y: -0.465}
-      - {x: -0.295, y: -0.875}
-      - {x: -0.16499999, y: -0.995}
-      - {x: 0.155, y: -0.995}
-      - {x: 0.295, y: -0.905}
-      - {x: 0.295, y: -0.375}
-      - {x: 0.125, y: 0.995}
+    - - {x: -0.10948348, y: 0.9745868}
+      - {x: -0.12659091, y: -0.41907027}
+      - {x: -0.22493835, y: -0.5026997}
+      - {x: -0.28854236, y: -0.62492496}
+      - {x: -0.28984496, y: -0.7822094}
+      - {x: -0.12891474, y: -0.95891476}
+      - {x: 0.08540705, y: -0.9692248}
+      - {x: 0.22025202, y: -0.8482946}
+      - {x: 0.2824384, y: -0.7794519}
+      - {x: 0.28025392, y: -0.59973454}
+      - {x: 0.19699663, y: -0.4654958}
+      - {x: 0.11128096, y: -0.41072315}
+      - {x: 0.11479339, y: 0.9745868}
 --- !u!114 &7362628025774590140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,9 +1720,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &8741416593385159568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -1824,9 +1843,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1857,14 +1876,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.13499999, y: 0.995}
-      - {x: -0.295, y: -0.465}
-      - {x: -0.295, y: -0.875}
-      - {x: -0.16499999, y: -0.995}
-      - {x: 0.155, y: -0.995}
-      - {x: 0.295, y: -0.905}
-      - {x: 0.295, y: -0.375}
-      - {x: 0.125, y: 0.995}
+    - - {x: -0.112397075, y: 0.9836986}
+      - {x: -0.121711284, y: -0.40849286}
+      - {x: -0.27171218, y: -0.5800517}
+      - {x: -0.26257733, y: -0.8161234}
+      - {x: -0.155942, y: -0.9315945}
+      - {x: 0.1060271, y: -0.9422599}
+      - {x: 0.23095849, y: -0.85226}
+      - {x: 0.27436477, y: -0.7738575}
+      - {x: 0.27367687, y: -0.59679693}
+      - {x: 0.20882481, y: -0.4921661}
+      - {x: 0.080272704, y: -0.3976029}
+      - {x: 0.091095686, y: 0.98746574}
 --- !u!114 &6214612112527418310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,9 +1905,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &3631575656532483629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,6 +1919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -2004,9 +2028,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2078,9 +2102,8 @@ MonoBehaviour:
   noConnectState: 0
   woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
-  body: {fileID: 0}
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &9160452030350179732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,6 +2116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []

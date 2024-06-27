@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5160707937845006891}
   - component: {fileID: 1127232583131088962}
   - component: {fileID: 8400319207993603152}
+  - component: {fileID: 8324491689475227687}
   m_Layer: 23
   m_Name: Dog_L_Eye
   m_TagString: Unique
@@ -139,9 +140,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -159,11 +160,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &8324491689475227687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234901657353132145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &1123245966573112084
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +199,7 @@ GameObject:
   - component: {fileID: 6451882192701338129}
   - component: {fileID: 5464262445011362927}
   - component: {fileID: 1795108668975398970}
+  - component: {fileID: 3529971342876499368}
   m_Layer: 23
   m_Name: Dog_L_Eye_2
   m_TagString: Unique
@@ -306,9 +329,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -326,11 +349,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &3529971342876499368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123245966573112084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &1370865671515935274
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +388,7 @@ GameObject:
   - component: {fileID: 6726073011386104632}
   - component: {fileID: 2129590215827052955}
   - component: {fileID: 2895489947889755020}
+  - component: {fileID: 6646877131121108557}
   m_Layer: 23
   m_Name: Dog_R_Ear_2
   m_TagString: Unique
@@ -479,9 +524,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -499,11 +544,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &6646877131121108557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370865671515935274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &1382672265785995098
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +583,7 @@ GameObject:
   - component: {fileID: 1143498427563346333}
   - component: {fileID: 7249518593389021871}
   - component: {fileID: 4914134840520718735}
+  - component: {fileID: 8189457157169103716}
   m_Layer: 23
   m_Name: Dog_R_Eye_2
   m_TagString: Unique
@@ -645,9 +712,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -665,11 +732,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &8189457157169103716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382672265785995098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &2372125255158382584
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +771,7 @@ GameObject:
   - component: {fileID: 8014105129707972945}
   - component: {fileID: 5921402507893587426}
   - component: {fileID: 4157348180696087511}
+  - component: {fileID: 41479997429594194}
   m_Layer: 23
   m_Name: Dog_R_Ear
   m_TagString: Unique
@@ -826,9 +915,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -846,11 +935,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &41479997429594194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372125255158382584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &3197266728229684199
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +974,7 @@ GameObject:
   - component: {fileID: 5456098463372421843}
   - component: {fileID: 8727696374651216558}
   - component: {fileID: 4275932409753846634}
+  - component: {fileID: 6692061771675387766}
   m_Layer: 23
   m_Name: Dog_Nouse
   m_TagString: Unique
@@ -991,9 +1102,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1011,11 +1122,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &6692061771675387766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197266728229684199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &3902371290635563482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1161,7 @@ GameObject:
   - component: {fileID: 7844092045718948157}
   - component: {fileID: 4386140519886800636}
   - component: {fileID: 5431144429258505136}
+  - component: {fileID: 6003780714335340917}
   m_Layer: 23
   m_Name: Dog_R_Eye
   m_TagString: Unique
@@ -1154,9 +1287,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1174,11 +1307,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &6003780714335340917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902371290635563482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &3998834344553561880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1346,7 @@ GameObject:
   - component: {fileID: 3423815080034554770}
   - component: {fileID: 97536680688205018}
   - component: {fileID: 5527242452403571618}
+  - component: {fileID: 6121114386592938883}
   m_Layer: 23
   m_Name: Dog_Nouse_2
   m_TagString: Unique
@@ -1334,9 +1489,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1354,11 +1509,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &6121114386592938883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998834344553561880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &5436785879225794711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1548,7 @@ GameObject:
   - component: {fileID: 7824374304180434362}
   - component: {fileID: 4463904406190542861}
   - component: {fileID: 8920457833066174786}
+  - component: {fileID: 8303805730460270067}
   m_Layer: 23
   m_Name: 'Dog_L_Ear '
   m_TagString: Unique
@@ -1520,9 +1697,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1540,11 +1717,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &8303805730460270067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5436785879225794711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &6365375881902072472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1812,7 @@ GameObject:
   - component: {fileID: 15297753805888272}
   - component: {fileID: 293884961876326143}
   - component: {fileID: 6754182623696842274}
+  - component: {fileID: 7612977769129947760}
   m_Layer: 23
   m_Name: Dog_L_Ear_2
   m_TagString: Unique
@@ -1748,9 +1947,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1768,11 +1967,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &7612977769129947760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904307587337710948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &7540815223012093341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +2006,7 @@ GameObject:
   - component: {fileID: 4067391248190870531}
   - component: {fileID: 6245992688341944188}
   - component: {fileID: 1068385635216771399}
+  - component: {fileID: 2360907866749787344}
   m_Layer: 23
   m_Name: Dog_Face_Blum
   m_TagString: Unique
@@ -1988,9 +2209,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2008,11 +2229,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &2360907866749787344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540815223012093341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1 &8295315563604778948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2268,7 @@ GameObject:
   - component: {fileID: 3836112964409455554}
   - component: {fileID: 4579640273525245806}
   - component: {fileID: 2185475655578434757}
+  - component: {fileID: 1623066399767990425}
   m_Layer: 23
   m_Name: Dog_Face_Blum_2
   m_TagString: Unique
@@ -2128,79 +2371,85 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.84499997, y: -0.775}
-      - {x: 0.955, y: -0.645}
-      - {x: 1.0649999, y: -0.49499997}
-      - {x: 1.125, y: -0.415}
-      - {x: 1.1949999, y: -0.295}
-      - {x: 1.2049999, y: -0.42499998}
-      - {x: 1.235, y: -0.49499997}
-      - {x: 1.285, y: -0.49499997}
-      - {x: 1.415, y: -0.355}
-      - {x: 1.485, y: -0.175}
-      - {x: 1.485, y: 0.155}
-      - {x: 1.4649999, y: 0.275}
-      - {x: 1.625, y: 0.265}
-      - {x: 1.635, y: 0.285}
-      - {x: 1.635, y: 0.645}
-      - {x: 1.5949999, y: 0.755}
-      - {x: 1.515, y: 0.905}
-      - {x: 1.4549999, y: 0.98499995}
-      - {x: 1.255, y: 1.175}
-      - {x: 1.185, y: 1.235}
-      - {x: 1.125, y: 1.265}
-      - {x: 1.095, y: 1.265}
-      - {x: 1.0849999, y: 1.255}
-      - {x: 1.045, y: 1.025}
-      - {x: 0.965, y: 0.905}
-      - {x: 0.835, y: 0.775}
-      - {x: 0.585, y: 0.625}
-      - {x: 0.59499997, y: 0.555}
-      - {x: 0.675, y: 0.275}
-      - {x: 0.675, y: 0.074999996}
-      - {x: 0.60499996, y: -0.105}
-      - {x: 0.465, y: -0.24499999}
-      - {x: 0.375, y: -0.285}
-      - {x: 0.13499999, y: -0.33499998}
-      - {x: -0.125, y: -0.345}
-      - {x: -0.13499999, y: -0.33499998}
-      - {x: -0.39499998, y: -0.285}
-      - {x: -0.575, y: -0.155}
-      - {x: -0.675, y: 0.085}
-      - {x: -0.675, y: 0.285}
-      - {x: -0.59499997, y: 0.615}
-      - {x: -0.615, y: 0.645}
-      - {x: -0.84499997, y: 0.775}
-      - {x: -0.965, y: 0.895}
-      - {x: -1.045, y: 1.035}
-      - {x: -1.0649999, y: 1.155}
-      - {x: -1.0849999, y: 1.265}
-      - {x: -1.155, y: 1.265}
-      - {x: -1.3249999, y: 1.115}
-      - {x: -1.4649999, y: 0.97499996}
-      - {x: -1.535, y: 0.875}
-      - {x: -1.635, y: 0.66499996}
-      - {x: -1.635, y: 0.285}
-      - {x: -1.5849999, y: 0.265}
-      - {x: -1.4449999, y: 0.345}
-      - {x: -1.4649999, y: 0.265}
-      - {x: -1.495, y: 0.044999998}
-      - {x: -1.495, y: -0.13499999}
-      - {x: -1.435, y: -0.305}
-      - {x: -1.395, y: -0.385}
-      - {x: -1.235, y: -0.515}
-      - {x: -1.2049999, y: -0.415}
-      - {x: -1.1949999, y: -0.325}
-      - {x: -0.995, y: -0.615}
-      - {x: -0.78499997, y: -0.835}
-      - {x: -0.655, y: -0.945}
-      - {x: -0.515, y: -1.035}
-      - {x: -0.225, y: -1.175}
-      - {x: -0.035, y: -1.255}
-      - {x: 0.035, y: -1.255}
-      - {x: 0.325, y: -1.145}
-      - {x: 0.565, y: -1.015}
-      - {x: 0.685, y: -0.92499995}
+    - - {x: 0.81797045, y: -0.69728994}
+      - {x: 0.9482426, y: -0.5199882}
+      - {x: 1.0345917, y: -0.383503}
+      - {x: 1.1182426, y: -0.24606511}
+      - {x: 1.2051361, y: -0.19363907}
+      - {x: 1.2557352, y: -0.27771914}
+      - {x: 1.2759525, y: -0.33377513}
+      - {x: 1.2823018, y: -0.37336692}
+      - {x: 1.3559525, y: -0.26524863}
+      - {x: 1.3845918, y: -0.17930779}
+      - {x: 1.4174261, y: 0.01758571}
+      - {x: 1.4039112, y: 0.20568046}
+      - {x: 1.363639, y: 0.34933135}
+      - {x: 1.4170336, y: 0.46680957}
+      - {x: 1.5844556, y: 0.37649697}
+      - {x: 1.6113491, y: 0.44042006}
+      - {x: 1.5978343, y: 0.6348639}
+      - {x: 1.5544556, y: 0.72459173}
+      - {x: 1.471077, y: 0.84756213}
+      - {x: 1.4245915, y: 0.951213}
+      - {x: 1.2617574, y: 1.1006687}
+      - {x: 1.2221657, y: 1.1268817}
+      - {x: 1.1655444, y: 1.1805326}
+      - {x: 1.1355444, y: 1.2041835}
+      - {x: 1.1323016, y: 1.1232308}
+      - {x: 1.0720295, y: 0.96418345}
+      - {x: 1.0055443, y: 0.8340474}
+      - {x: 0.8687869, y: 0.71080476}
+      - {x: 0.67960346, y: 0.6047278}
+      - {x: 0.6997396, y: 0.5583787}
+      - {x: 0.7729822, y: 0.32230178}
+      - {x: 0.7729822, y: 0.05472783}
+      - {x: 0.67933124, y: -0.1523017}
+      - {x: 0.5460887, y: -0.28554434}
+      - {x: 0.38851482, y: -0.34243783}
+      - {x: 0.17892304, y: -0.40595263}
+      - {x: -0.05404737, y: -0.42608872}
+      - {x: -0.17216566, y: -0.42284608}
+      - {x: -0.40312386, y: -0.36217722}
+      - {x: -0.5894071, y: -0.2727723}
+      - {x: -0.68061095, y: -0.18749568}
+      - {x: -0.76436317, y: -0.004363127}
+      - {x: -0.7761325, y: 0.22486717}
+      - {x: -0.74806535, y: 0.41820163}
+      - {x: -0.68879944, y: 0.5821338}
+      - {x: -0.8641331, y: 0.7012006}
+      - {x: -0.9786665, y: 0.8102674}
+      - {x: -1.0472114, y: 0.89987373}
+      - {x: -1.0941995, y: 0.98853374}
+      - {x: -1.1169329, y: 1.0566008}
+      - {x: -1.1150664, y: 1.229467}
+      - {x: -1.1871088, y: 1.1756244}
+      - {x: -1.2287993, y: 1.1529341}
+      - {x: -1.3219166, y: 1.0792358}
+      - {x: -1.3905995, y: 0.9728679}
+      - {x: -1.4379704, y: 0.89391124}
+      - {x: -1.4944557, y: 0.80066866}
+      - {x: -1.5606687, y: 0.6345917}
+      - {x: -1.6045917, y: 0.3762248}
+      - {x: -1.4971538, y: 0.42717737}
+      - {x: -1.3402603, y: 0.4396035}
+      - {x: -1.4143195, y: 0.27513605}
+      - {x: -1.4341835, y: 0.051757377}
+      - {x: -1.4105326, y: -0.118106544}
+      - {x: -1.3572899, y: -0.27797043}
+      - {x: -1.3139113, y: -0.33769822}
+      - {x: -1.2654083, y: -0.37309474}
+      - {x: -1.2320296, y: -0.20214215}
+      - {x: -1.1409409, y: -0.1966095}
+      - {x: -0.9814852, y: -0.4629587}
+      - {x: -0.7579704, y: -0.75053257}
+      - {x: -0.6009408, y: -0.8808047}
+      - {x: -0.4271539, y: -0.98431945}
+      - {x: -0.16418347, y: -1.0939112}
+      - {x: 0.005544357, y: -1.1772901}
+      - {x: 0.1397396, y: -1.1164734}
+      - {x: 0.30810648, y: -1.0301243}
+      - {x: 0.531213, y: -0.9271538}
+      - {x: 0.67486393, y: -0.83377516}
 --- !u!50 &4579640273525245806
 Rigidbody2D:
   serializedVersion: 4
@@ -2214,9 +2463,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2234,11 +2483,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
   shapeID: 0
   screwList: []
+--- !u!114 &1623066399767990425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295315563604778948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosReverse: []
+  RotReverse: []
+  noConnectState: 0
+  woodNuts: []
+  isSpawnState: 0
+  woodNut: {fileID: 0}
+  useBurst: 0
 --- !u!1001 &129680761514024748
 PrefabInstance:
   m_ObjectHideFlags: 0

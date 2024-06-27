@@ -6,38 +6,26 @@ using UnityEngine;
 public class Screw : MonoBehaviour
 {
     private DragDrop drop;
-    private Sprite spr;
-    private Collider2D col;
     [SerializeField] private Sprite[] sprContainer;
     [SerializeField] private Sprite[] normalSprContainer;
-    private void Awake()
+    
+
+    private void OnEnable()
+    {
+        
+    }
+    private void Start()
     {
         drop = GetComponentInChildren<DragDrop>();
-        spr = GetComponent<SpriteRenderer>().sprite;
-        col = GetComponent<Collider2D>();
-    }
-
-    private void Update()
-    {
-        if (drop.drag)
-        {
-            ChangeSpr();
-        }
-        else
-        {
-            ChangeSprBack();
-        }
+        ChangeSprBack();
     }
     public void ChangeSpr()
     {
-        spr = sprContainer[2];
-        gameObject.GetComponent<SpriteRenderer>().sprite = spr;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprContainer[2];
     }
     public void ChangeSprBack()
     {
-        spr = normalSprContainer[2];
-        gameObject.GetComponent<SpriteRenderer>().sprite = spr;
-
+        gameObject.GetComponent<SpriteRenderer>().sprite = normalSprContainer[2];
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

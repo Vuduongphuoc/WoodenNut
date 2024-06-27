@@ -21,7 +21,7 @@ public class LeveLManager : MonoBehaviour
             Destroy(this);
         }
     }
-    private void Reset()
+    public void CallResetAfterFixLevel()
     {
         levels.Clear();
         foreach(LeveLScriptableObject data in Resources.LoadAll<LeveLScriptableObject>("Levels"))

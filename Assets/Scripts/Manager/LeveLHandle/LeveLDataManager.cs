@@ -25,10 +25,6 @@ public class LeveLDataManager : MonoBehaviour, IDataPresistence
             Destroy(this);
         }
     }
-    private void Start()
-    {
-        
-    }
     public void LoadData(GameData data)
     {
         levelID = data.levelID;
@@ -56,12 +52,12 @@ public class LeveLDataManager : MonoBehaviour, IDataPresistence
             newlvl.ObjPrefabs.Add(objects[i].GetData());
         }
         //ScriptableUtility.SaveLevelFile(newlvl);
+        LeveLManager.Instance.CallResetAfterFixLevel();
         //string data = JsonUtility.ToJson(newlvl);
         //string filePath = Application.dataPath + Path.AltDirectorySeparatorChar + "/Level " + levelID + ".json";
 
         //File.WriteAllText(filePath, data);
         //Debug.Log(filePath);
-
     }
     #endregion
 
@@ -83,7 +79,6 @@ public class LeveLDataManager : MonoBehaviour, IDataPresistence
                 if (level.ObjPrefabs[i].ObjID > 5 && level.ObjPrefabs[i].ObjID < 20)
                 {
                     createObj.GetComponent<WoodStick>().color = level.ObjPrefabs[i].woodColorID;
-                    
                     screwHoleList.Add(createObj.gameObject);
                 }
                 if (level.ObjPrefabs[i].ObjID >= 20)

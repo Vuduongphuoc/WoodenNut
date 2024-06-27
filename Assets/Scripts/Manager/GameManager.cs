@@ -15,9 +15,8 @@ public class GameManager : MonoBehaviour
     public SaveLoadData saveLoadData;
     public PlayerData playerData;
     public Items playerItem;
-
-    public int levelNeedToReset;
     private bool isPause;
+    public int levelNeedToReset;
     private int bonusCoin;
     private int finishLevelReward;
     private bool isAdsBonus;
@@ -40,12 +39,10 @@ public class GameManager : MonoBehaviour
         playerItem = new Items();
         UpdateGameState(GameState.OpenGameState);
     }
-
     #region Game States
     public void UpdateGameState(GameState newState)
     {
         states = newState;
-
         switch (newState)
         {
             case GameState.IdleState:
@@ -322,6 +319,7 @@ public class GameManager : MonoBehaviour
     {
         if (levelNeedToReset == LeveLManager.Instance.levels.Last().levelIndex)
         {
+            UIManager.instance.WinSceneHide();
             UIManager.instance.claimRewardBtn.gameObject.SetActive(false);
             UIManager.instance.exitBtn.gameObject.SetActive(true);
             UIManager.instance.NoticeOn();
@@ -331,6 +329,7 @@ public class GameManager : MonoBehaviour
         {
             levelNeedToReset = levelNeedToReset + 1;
             LoadLevel(levelNeedToReset);
+            UpdateNewLevelToData(levelNeedToReset);
         }
     }
     public void ResetLevel()
@@ -340,6 +339,7 @@ public class GameManager : MonoBehaviour
     public void ReturnMainMenu()
     {
         inGamePlay = false;
+        levelNeedToReset = 0;
         LeveLDataManager.instance.ClearLevel();
         UIManager.instance.MainMenuScene();
 
@@ -384,13 +384,15 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    private void OnApplicationFocus(bool Focus)
-    {
-        isPause = !Focus;
-    }
+    //private void OnApplicationFocus(bool focus)
+    //{
+    //    isPause = !focus;
+    //    print("ApplicationFocus: " + isPause);
+    //}
     private void OnApplicationPause(bool pause)
     {
         isPause = pause;
+        print("ApplicationPause: " + isPause);
     }
     private void OnApplicationQuit()
     {

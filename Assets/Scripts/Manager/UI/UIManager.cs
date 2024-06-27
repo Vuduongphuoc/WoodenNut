@@ -127,6 +127,17 @@ public class UIManager : MonoBehaviour
         isVibOn = true;
         //boardSpr = GameManager.Instance.board.GetComponent<SpriteRenderer>().sprite;
     }
+    private void Update()
+    {
+        if (DestroyScrewController.instance.DestroyPhaseIsOn || isPause)
+        {
+            powerBtns[1].interactable = false;
+        }
+        else
+        {
+            powerBtns[1].interactable = true;
+        }
+    }
     #region SmallScene
     public void DailyOpen()
     {
@@ -186,16 +197,16 @@ public class UIManager : MonoBehaviour
 
     public void ChoseLevelOn()
     {
-        LeanTween.alpha(mainMenuBtns.GetComponentInChildren<RectTransform>(), 0f, 0.2f);
-        LeanTween.moveLocalX(mainMenuBtns, -1080f, 0.3f).setEase(LeanTweenType.easeOutQuart);
         LevelScene.SetActive(true);
+        LeanTween.alpha(mainMenuBtns.GetComponentInChildren<RectTransform>(), 0f, 0.4f);
+        LeanTween.moveLocalX(mainMenuBtns, -1080f, 0.5f).setEase(LeanTweenType.easeOutQuart);
+        LeanTween.moveLocalX(LevelScene, 0, 0.5f).setEase(LeanTweenType.easeOutQuart);
     }
     public void ChoseLevelOff()
     {
-        LevelScene.SetActive(false);
-        LeanTween.alpha(mainMenuBtns.GetComponentInChildren<RectTransform>(), 1f, 0.2f);
-        LeanTween.moveLocalX(mainMenuBtns, 0f, 0.3f).setEase(LeanTweenType.easeOutQuart);
-
+        LeanTween.moveLocalX(LevelScene, -1080, 0.5f).setEase(LeanTweenType.easeOutQuart);
+        LeanTween.alpha(mainMenuBtns.GetComponentInChildren<RectTransform>(), 1f, 0.4f);
+        LeanTween.moveLocalX(mainMenuBtns, 0f, 0.5f).setEase(LeanTweenType.easeOutQuart);
     }
     public void NoticeOn()
     {
@@ -224,8 +235,6 @@ public class UIManager : MonoBehaviour
         LeanTween.alpha(noticeSign.GetComponentInChildren<RectTransform>(), 0f, 0.3f);
         LeanTween.moveLocalX(noticeSign, -1080f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
         PopUpOff();
-        NoticeImg.gameObject.SetActive(true);
-        claimRewardBtn.gameObject.SetActive(true);
         isPause = false;
     }
     public void PopUpOn()
@@ -240,6 +249,7 @@ public class UIManager : MonoBehaviour
     }
     public void PopUpOff()
     {
+
         addMoreItemByCoinBtn.onClick.RemoveAllListeners();
         LeanTween.alpha(blackScreen.GetComponent<RectTransform>(), 0f, 0.3f);
         blackScreen.GetComponent<Image>().raycastTarget = false;
@@ -247,6 +257,9 @@ public class UIManager : MonoBehaviour
         LeanTween.alpha(popUP.GetComponentInChildren<RectTransform>(), 0f, 0.3f);
         LeanTween.moveLocalX(popUP, -1080f, 1f).setDelay(0.1f).setEase(LeanTweenType.easeOutQuart);
         popUP.SetActive(false);
+        NoticeImg.gameObject.SetActive(true);
+        claimRewardBtn.gameObject.SetActive(true);
+        exitBtn.gameObject.SetActive(true);
         ShowItemsOnUI();
         n = null;
         isPause = false;
@@ -265,11 +278,15 @@ public class UIManager : MonoBehaviour
             {
                 lvlbtn.GetComponent<Image>().sprite = btnSprs[0];
             }
+            else
+            {
+                lvlbtn.GetComponent<Image>().sprite = btnSprs[1];
+            }
             lvlbtn.GetComponent<Button>().onClick.AddListener(delegate { ChoseLevelOff(); });
             lvlbtn.GetComponent<Button>().onClick.AddListener(delegate { StartCoroutine(LoadLevelGamePlay(lvl.levelIndex, lvl)); });
-
             //if (GameManager.Instance.CheckLevelToUnlock(lvl.levelIndex))
             //{
+
             //    lvlbtn.GetComponent<LevelDetail>().lockedImg.SetActive(false);
             //    lvlbtn.GetComponent<Button>().interactable = true;
             //}
@@ -289,6 +306,7 @@ public class UIManager : MonoBehaviour
         {
             if (GameManager.Instance.CheckLevelToUnlock(a.GetComponent<LevelDetail>().levelObject.levelIndex))
             {
+               
                 a.GetComponent<LevelDetail>().lockedImg.SetActive(false);
                 a.GetComponent<Button>().interactable = true;
             }

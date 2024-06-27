@@ -24,10 +24,6 @@ public class DragDropController : MonoBehaviour
             Destroy(this);
         }
     }
-    private void Start()
-    {
-       
-    }
     public void CallScrewHole()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, detectHole);
@@ -73,6 +69,7 @@ public class DragDropController : MonoBehaviour
             dragObjs.parentObj.gameObject.transform.position = dragObjs.startPos;
             ResetValue();
         }
+        dragObjs.parentObj.ChangeSprBack();
         dragObjs.drag = false;
 
     }

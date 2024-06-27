@@ -8,7 +8,6 @@ public class ButtonDelay : MonoBehaviour
 {
     public void Delay(Button a)
     {
-
         StartCoroutine(DelayActive(a));
     }
     // Update is called once per frame
@@ -19,16 +18,5 @@ public class ButtonDelay : MonoBehaviour
         yield return new WaitForSeconds(1f);
         a.interactable = true;
 
-    }
-    private void DelayDestroyActive(Button a)
-    {
-        if (DestroyScrewController.instance.DestroyPhaseIsOn)
-        {
-            a.interactable = false;
-        }
-        else
-        {
-            a.interactable = true;
-        }
     }
 }

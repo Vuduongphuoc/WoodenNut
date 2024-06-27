@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class FPSDisplay : MonoBehaviour
 {
+    bool isPause;
     float deltaTime = 0f;
-    private void Awake()
+    private void Start()
     {
         Application.targetFrameRate = 60;
     }
     private void Update()
     {
-        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        if (!isPause)
+        {
+            deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        }
     }
     private void OnGUI()
     {
@@ -26,5 +30,9 @@ public class FPSDisplay : MonoBehaviour
         float fps = 1.0f / deltaTime;
         string text = string.Format("FPS:{1:0.} ({0:0.0} ms)",msec, fps);
         GUI.Label(rect, text, style);
+    }
+    private void OnApplicationPause(bool focus)
+    {
+        isPause = focus;
     }
 }

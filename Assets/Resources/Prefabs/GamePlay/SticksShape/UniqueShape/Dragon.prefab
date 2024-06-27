@@ -155,9 +155,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -390,13 +390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!114 &4168567188403665615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []
@@ -596,13 +598,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e8d753dd089f4f8eef063ce42a58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screwL: []
   PosReverse: []
   RotReverse: []
   noConnectState: 0
+  woodNuts: []
   isSpawnState: 0
-  pullPhys: 0
   woodNut: {fileID: 1582957639873269299, guid: 8471b9a718307fc4dbe54d3e6a497fb4, type: 3}
+  useBurst: 0
 --- !u!50 &8559488631910227366
 Rigidbody2D:
   serializedVersion: 4
@@ -616,9 +618,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 2
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -636,6 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc56ccd27be13f4d93861a548814ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  areaEffectStick: {fileID: 0}
   color: 8
   UniqueActive: 0
   uniqueShape: []

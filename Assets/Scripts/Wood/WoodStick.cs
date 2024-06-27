@@ -20,32 +20,21 @@ public class WoodStick : MonoBehaviour
     [Space(3)]
     private Rigidbody2D body;
     private SpriteRenderer objectSprite;
-    private GameObject ShapeChildObj;
-    private SpawnNut spawnNut;
     public List<GameObject> screwList = new List<GameObject>();
     bool delayAfterMoveScrew;
-    int count;
     int directForce;
-    float direc;
-    GameObject removeObj;
-    public bool stopAddForce;
     Collider2D thisCollider;
-    Transform objTransform;
     bool isDestroy;
     // Start is called before the first frame update
     private void Awake()
     {
-
         body = GetComponent<Rigidbody2D>();
         objectSprite = GetComponent<SpriteRenderer>();
-        objTransform = GetComponent<Transform>();
+        thisCollider = GetComponent<Collider2D>();
         UpdateStickColors(color);
     }
     private void Start()
     {
-        thisCollider = GetComponent<Collider2D>();
-        spawnNut = GetComponent<SpawnNut>();
-        direc = Random.Range(-0.5f, 0.5f);
         body.angularVelocity = 0;
         ActiveUniqueShape(shapeID);
         UpdateStickColors(color);
@@ -76,7 +65,6 @@ public class WoodStick : MonoBehaviour
             }
         }
         ApplyGravity();
-        AddForce();
         //if (!stopAddForce && !AntiForcePrevent && screwList.Count == 0)
         //{
         //    directForce++;
@@ -225,27 +213,11 @@ public class WoodStick : MonoBehaviour
             }
         }
     }
-    private void AddForce()
-    {
-        if (spawnNut.woodNuts.Any(c => c.GetComponent<WoodNut>().isConnect))
-        {
-            stopAddForce = true;
-        }
-        else
-        {
-            stopAddForce = false;
-        }
-    }
     public void ApplyGravity()
     {
         if (screwList.Count <= 1 && !delayAfterMoveScrew)
         {
-            body.gravityScale = 1f;
             body.bodyType = RigidbodyType2D.Dynamic;
-        }
-        else if(screwList.Count == 0)
-        {
-            body.gravityScale = 1.5f;
         }
         else if (this.gameObject.CompareTag("Unique"))
         {
@@ -279,7 +251,7 @@ public class WoodStick : MonoBehaviour
             CountScrew();
             CheckThisIsUniqueOrNot();
         }
-        else if (collision.gameObject.GetComponent<ScrewConnectTrigger>())
+        if (collision.gameObject.GetComponent<ScrewConnectTrigger>())
         {
             Physics2D.IgnoreCollision(thisCollider, collision);
         }
@@ -290,10 +262,6 @@ public class WoodStick : MonoBehaviour
         {
             body.bodyType = RigidbodyType2D.Static;
             gameObject.GetComponent<Collider2D>().enabled = false;
-        }
-        else if (collision.gameObject.GetComponent<ScrewConnectTrigger>())
-        {
-            direc = -direc;
         }
     }
 

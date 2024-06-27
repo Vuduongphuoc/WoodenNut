@@ -22,6 +22,10 @@ public class ReverseController : MonoBehaviour
             Instance = this;
         }
     }
+    private void Start()
+    {
+        EventManager.singleton.ReverseEvent += ActiveReverse;
+    }
     public void SaveObjectsMove()
     {
         SaveStickMoveBeforeChange();
@@ -58,9 +62,8 @@ public class ReverseController : MonoBehaviour
             i.gameObject.SetActive(true);
             if (i.PosReverse.Count > 0 && i.RotReverse.Count > 0)
             {
-                i.transform.position = i.PosReverse.Last();
+                i.transform.SetPositionAndRotation(i.PosReverse.Last(), i.RotReverse.Last());
                 i.PosReverse.Remove(i.PosReverse.Last());
-                i.transform.rotation = i.RotReverse.Last();
                 i.RotReverse.Remove(i.RotReverse.Last());
                 if (!i.enabled)
                 {

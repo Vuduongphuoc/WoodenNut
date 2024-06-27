@@ -31,8 +31,6 @@ MonoBehaviour:
     ObjPath: Prefabs/GamePlay/SticksShape/Square_Shape
   - ObjID: 11
     ObjPath: Prefabs/GamePlay/SticksShape/Long_NorShape
-  - ObjID: 12
-    ObjPath: Prefabs/GamePlay/SticksShape/T_Shape
   - ObjID: 13
     ObjPath: Prefabs/GamePlay/SticksShape/X_Shape
   - ObjID: 14

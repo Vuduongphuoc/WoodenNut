@@ -61,7 +61,6 @@ public class WheelSpinController : MonoBehaviour
         //AudioManager.Instance.PlaySFX("Spin");
         if (inRotate == 0)
         {
-           
             rbody.AddTorque(rotatePower);
             inRotate = 1;
         }
@@ -159,27 +158,27 @@ public class WheelSpinController : MonoBehaviour
     {
         if (rewardType == RewardsOnWheel.RewardType.Coin)
         {
-            RewardPanel.instance.RewardPopUpFromWheel(sprs[0],reward);
+            RewardPanel.instance.RewardPopUp(sprs[0],reward);
             UIManager.instance.coin += reward;
         }
         else if(rewardType == RewardsOnWheel.RewardType.RePlayLevel)
         {
-            RewardPanel.instance.RewardPopUpFromWheel(sprs[4], reward);
+            RewardPanel.instance.RewardPopUp(sprs[4], reward);
             UIManager.instance.replayValue += reward;
         }
         else if(rewardType == RewardsOnWheel.RewardType.ReverseMove)
         {
-            RewardPanel.instance.RewardPopUpFromWheel(sprs[1], reward);
+            RewardPanel.instance.RewardPopUp(sprs[1], reward);
             UIManager.instance.reverseValue += reward;
         }
         else if(rewardType == RewardsOnWheel.RewardType.UnlockHole)
         {
-            RewardPanel.instance.RewardPopUpFromWheel(sprs[2], reward);
+            RewardPanel.instance.RewardPopUp(sprs[2], reward);
             UIManager.instance.unlockHoleValue += reward;
         }
         else if(rewardType == RewardsOnWheel.RewardType.MoreTimeTicket)
         {
-            RewardPanel.instance.RewardPopUpFromWheel(sprs[3], reward);
+            RewardPanel.instance.RewardPopUp(sprs[3], reward);
             UIManager.instance.bonusTimeTicketValue += reward;
         }
         UIManager.instance.NoticeDisplay.text = "Reward";
